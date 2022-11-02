@@ -1,0 +1,9 @@
+{
+  "name": "insurgo",
+  "scripts": {
+    "pcf": "pnpm --filter @insurgo/pcf"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
