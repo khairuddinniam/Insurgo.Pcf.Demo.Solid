@@ -7,18 +7,16 @@ const AppEntry: Component = () => {
     rawInputs: {
       name, price
     }, 
-    setResult, 
-    notifyOutputChanged,
-    result
+    outputs,
+    setOutputs,
   } = useAppContext();
   const [quantity, setQuantity] = createSignal(0);
   const invoiceAmount = createMemo(() => price() * quantity());
   createEffect(on(invoiceAmount, (invoiceAmount) => {
-    setResult('outputs', (state) => ({
+    setOutputs((state) => ({
       ...state,
       invoiceAmount,
     }));
-    notifyOutputChanged();
   }));
 
   return (
@@ -40,7 +38,7 @@ const AppEntry: Component = () => {
           <FormHelperText>Product quantity.</FormHelperText>
         </FormControl>
         <p>Result:</p>
-        <p>{JSON.stringify(result().outputs)}</p>
+        <p>{JSON.stringify(outputs())}</p>
       </Box>
     </HopeProvider>
   );
