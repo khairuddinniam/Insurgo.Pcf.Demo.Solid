@@ -18,7 +18,10 @@
       -->
     </external-service-usage>
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="name" display-name-key="Name property" description-key="Name property" of-type="SingleLine.Text" usage="input" required="true"/>
+    <property name="price" display-name-key="Money property" description-key="Money property" of-type="Currency" usage="input" required="true"/>
+    
+    <property name="invoiceAmount" display-name-key="Invoice Amount property" description-key="Invoice Amount property" of-type="Currency" usage="output"/>
     <!--
       Property node's of-type attribute can be of-type-group attribute.
       Example:

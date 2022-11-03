@@ -27,7 +27,7 @@ function createAppContext(setup: AppSetup<IInputs>): AppContext<IInputs, IOutput
   const [context, setContext] = createSignal(setup.context, { equals: false });
   const [result, setResult] = createStore<AppResult<IOutputs>>({
     outputs: {
-      sampleProperty: undefined
+      invoiceAmount: undefined
     }
   });
 

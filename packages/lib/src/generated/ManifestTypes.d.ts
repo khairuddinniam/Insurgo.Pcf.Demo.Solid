@@ -4,8 +4,9 @@
 
 // Define IInputs and IOutputs Type. They should match with ControlManifest.
 export interface IInputs {
-    sampleProperty: ComponentFramework.PropertyTypes.StringProperty;
+    name: ComponentFramework.PropertyTypes.StringProperty;
+    price: ComponentFramework.PropertyTypes.NumberProperty;
 }
 export interface IOutputs {
-    sampleProperty?: string;
+    invoiceAmount?: number;
 }

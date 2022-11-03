@@ -4,16 +4,18 @@ import { useAppContext } from './AppProvider';
 
 const AppComponent: Component = () => {
   const appContext = useAppContext();
-  setInterval(() => {
-    console.log('VALUE: ', appContext.context().parameters.sampleProperty.raw);
-  }, 1000)
   return (
     <HopeProvider>
       <Box>
         <FormControl required>
-          <FormLabel for="text">Input Component</FormLabel>
-          <Input id="text" type="text" value={appContext.context().parameters.sampleProperty.raw} />
-          <FormHelperText>This is text helper.</FormHelperText>
+          <FormLabel for="text">Name</FormLabel>
+          <Input id="text" type="text" value={appContext.context().parameters.name.raw} />
+          <FormHelperText>Product name.</FormHelperText>
+        </FormControl>
+        <FormControl required>
+          <FormLabel for="text">Price</FormLabel>
+          <Input id="text" type="text" value={appContext.context().parameters.price.raw} />
+          <FormHelperText>Product price.</FormHelperText>
         </FormControl>
       </Box>
     </HopeProvider>
