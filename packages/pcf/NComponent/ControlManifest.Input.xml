@@ -32,10 +32,10 @@
     -->
     <resources>
       <code path="index.ts" order="1"/>
-      <!-- UNCOMMENT TO ADD MORE RESOURCES
-      <css path="css/NComponent.css" order="1" />
-      <resx path="strings/NComponent.1033.resx" version="1.0.0" />
+      <!-- UNCOMMENT TO ADD MORE RESOURCES 
       -->
+      <css path="css/index.css" order="1" />
+      <!-- <resx path="strings/NComponent.1033.resx" version="1.0.0" /> -->
     </resources>
     <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
     <feature-usage>

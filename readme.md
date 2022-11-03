@@ -1,0 +1,3 @@
+- pnpm i
+- pnpm lib build
+- pnpm pcf start

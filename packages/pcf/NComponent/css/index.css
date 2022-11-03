@@ -1,0 +1,8 @@
+.insurgo-pcf-container {
+  box-sizing: border-box;
+  text-align: initial;
+}
+
+.insurgo-pcf-container *, .insurgo-pcf-container *:before, .insurgo-pcf-container *:after {
+  box-sizing: inherit;
+}

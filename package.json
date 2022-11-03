@@ -1,6 +1,7 @@
 {
   "name": "insurgo",
   "scripts": {
+    "lib": "pnpm --filter @insurgo/lib",
     "pcf": "pnpm --filter @insurgo/pcf"
   },
   "keywords": [],
