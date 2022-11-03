@@ -1,5 +1,5 @@
 import { IInputs, IOutputs } from './generated/ManifestTypes';
-import { renderApp } from '@insurgo/lib';
+import { createApp, App } from '@insurgo/lib';
 
 export class NComponent implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
@@ -10,6 +10,8 @@ export class NComponent implements ComponentFramework.StandardControl<IInputs, I
     {
 
     }
+
+    private _app: App<IInputs, IOutputs>;
 
     /**
      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
@@ -27,7 +29,12 @@ export class NComponent implements ComponentFramework.StandardControl<IInputs, I
     {
         // Add control initialization code
         container.classList.add('insurgo-pcf-container');
-        renderApp(container);
+        this._app = createApp({
+            context,
+            notifyOutputChanged,
+            state,
+            container,
+        });
     }
 
 
@@ -38,6 +45,7 @@ export class NComponent implements ComponentFramework.StandardControl<IInputs, I
     public updateView(context: ComponentFramework.Context<IInputs>): void
     {
         // Add code to update control view
+        this._app.updateView(context);
     }
 
     /**
@@ -46,7 +54,7 @@ export class NComponent implements ComponentFramework.StandardControl<IInputs, I
      */
     public getOutputs(): IOutputs
     {
-        return {};
+        return this._app.getOutputs();
     }
 
     /**
@@ -56,5 +64,6 @@ export class NComponent implements ComponentFramework.StandardControl<IInputs, I
     public destroy(): void
     {
         // Add code to cleanup control if necessary
+        this._app.destroy();
     }
 }

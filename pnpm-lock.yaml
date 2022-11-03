@@ -9,6 +9,7 @@ importers:
     specifiers:
       '@hope-ui/solid': ^0.6.7
       '@stitches/core': ^1.2.8
+      '@types/powerapps-component-framework': ^1.3.4
       solid-js: ^1.5.1
       solid-transition-group: ^0.0.11
       typescript: ^4.8.2
@@ -18,6 +19,7 @@ importers:
     dependencies:
       '@hope-ui/solid': 0.6.7_2wan5rrksngf2hoynfboyqp5ly
       '@stitches/core': 1.2.8
+      '@types/powerapps-component-framework': 1.3.4
       solid-js: 1.6.1
       solid-transition-group: 0.0.11_solid-js@1.6.1
     devDependencies:
@@ -660,11 +662,9 @@ packages:
     resolution: {integrity: sha512-6WSljwSP69hS3PTpdJnfnn1yuxzFiR/00UivmEZHAdROdm5r0BEWAmiltcNtClRn1407CMP4nCFMjJbTXRRVDQ==}
     dependencies:
       '@types/react': 18.0.24
-    dev: true
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
-    dev: true
 
   /@types/react/18.0.24:
     resolution: {integrity: sha512-wRJWT6ouziGUy+9uX0aW4YOJxAY0bG6/AOk5AW5QSvZqI7dk6VBIbXvcVgIw/W5Jrl24f77df98GEKTJGOLx7Q==}
@@ -672,11 +672,9 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
       csstype: 3.1.1
-    dev: true
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
-    dev: true
 
   /@typescript-eslint/eslint-plugin/4.33.0_k4l66av2tbo6kxzw52jzgbfzii:
     resolution: {integrity: sha512-aINiAxGVdOl1eJyVjaWn/YcVAq4Gi/Yo35qHGCnqbWVz61g39D0h23veY/MA0rFFGfxK7TySg2uwDeNv+JgVpg==}
