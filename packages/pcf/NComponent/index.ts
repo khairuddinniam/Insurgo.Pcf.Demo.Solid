@@ -33,8 +33,8 @@ export class NComponent implements ComponentFramework.StandardControl<IInputs, I
             context,
             notifyOutputChanged,
             state,
-            container,
         });
+        this._app.render(container);
     }
 
 

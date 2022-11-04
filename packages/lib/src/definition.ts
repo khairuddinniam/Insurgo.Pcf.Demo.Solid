@@ -3,23 +3,24 @@ import { Accessor, Setter } from 'solid-js';
 export type AppSetup<Inputs> = {
   context: ComponentFramework.Context<Inputs>;
   notifyOutputChanged: () => void;
-  state: ComponentFramework.Dictionary; 
-  container: HTMLDivElement;
+  state: ComponentFramework.Dictionary;
 }
 
-export type App<Inputs, Outputs> = {
+export type App<Inputs, Outputs extends {}> = {
   updateView(context: ComponentFramework.Context<Inputs>): void;
   getOutputs(): Outputs;
   destroy(): void;
+  render(container: HTMLElement): void;
+  readonly pcf: PcfContext<Inputs, Outputs>;
 }
 
-export type AppContext<Inputs, Outputs> = {
-  notifyOutputChanged: () => void;
-  state: Accessor<ComponentFramework.Dictionary>; 
-  context: Accessor<ComponentFramework.Context<Inputs>>;
-  outputs: Accessor<Outputs>;
-  setOutputs: Setter<Outputs>;
-  rawInputs: ObjectAccessor<RawInputs<Inputs>>;
+export type PcfContext<Inputs, Outputs extends {}> = {
+  notifyOutputChanged(): void;
+  readonly state: Accessor<ComponentFramework.Dictionary>; 
+  readonly context: Accessor<ComponentFramework.Context<Inputs>>;
+  readonly outputs: Accessor<Outputs>;
+  readonly setOutputs: Setter<Outputs>;
+  readonly rawInputs: ObjectAccessor<RawInputs<Inputs>>;
 }
 
 export type ObjectAccessor<T> = {
